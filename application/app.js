@@ -1,19 +1,18 @@
 let express = require('express');
 let app = express();
-let mongoose = require('mongoose')
-let Schema = mongoose.Schema; 
+let Post = require('/models/posts').Post;
 
-let postSchema = new Schema({
-    id: Number,
-    title: String,
-    date: Date,
-    description: String,
-    text: String,
-    country: String,
-    imageURL: String
+let post1 = new Post({
+    id: 1,
+    title: 'Eiffel Twoer',
+    date: new Date(),
+    description: 'Some description',
+    text: 'Some text',
+    country: 'France',
+    imageURL: '/images/1.jpg'
 });
 
-let.Post = mongoose.model('Post', postSchema);
+post1.save();
 
 app.use(express.static('public'));
 
