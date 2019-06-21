@@ -11,7 +11,7 @@ let postSchema = new Schema({
     imageURL: String
 });
 
-let.Post = mongoose.model('Post', postSchema);
+let Post = mongoose.model('Post', postSchema);
 
 
-module.exports = { Post };
+module.exports = { Post }
