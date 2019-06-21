@@ -1,10 +1,13 @@
 let express = require('express');
 let app = express();
-let Post = require('/models/posts').Post;
+let mongoose = require('mongoose');
+let Post = require('./models/posts').Post;
+
+mongoose.connect('mongodb://localhost/travels');
 
 let post1 = new Post({
     id: 1,
-    title: 'Eiffel Twoer',
+    title: 'Eiffel Tower',
     date: new Date(),
     description: 'Some description',
     text: 'Some text',
