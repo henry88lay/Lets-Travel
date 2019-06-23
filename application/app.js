@@ -5,7 +5,7 @@ let Post = require('./models/posts').Post;
 
 mongoose.connect('mongodb://localhost/travels', { useNewUrlParser: true });
 
-aoo.get('/posts', async (req, resp) => {
+app.get('/posts', async (req, resp) => {
     let posts = await Post.find();
     resp.send(posts);
 })
