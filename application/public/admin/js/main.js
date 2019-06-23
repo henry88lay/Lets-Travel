@@ -1,3 +1,5 @@
+let addPostBtn = document.querySelector('.create-post-btn')
+
 document.addEventListener('DOMContentLoaded', async function() {
     let posts = await getPosts();
     let articles = document.querySelector('.articles');
